@@ -14,6 +14,9 @@
           <a class="nav-link" href="{{ route('book.index') }}">Articoli</a>
         </li>
       </ul>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('contattaci') }}">contattaci</a>
+        </li>
     </div>
   </div>
 </nav>

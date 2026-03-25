@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Mail\Mailables\Address;
 
 class BookController extends Controller
 {
@@ -26,7 +29,19 @@ public function show($id){
     }
 }
 
+ public function contact_us () {
+    return view('contact_us');
+}
 
+public function contact_us_send(Request $request){
+    $user = $request->input('user');
+    $email = $request->input('email');
+    $message = $request->input('message');
+
+    Mail::to($email)->send(new ContactMail($user, $email, $message));
+  //  dd('email inviata con successo');
+    return redirect(route('home'))->with('emailSent', 'Email inviata con successo');
+}
 
 
 
