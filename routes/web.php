@@ -19,7 +19,7 @@ Route::get('dettaglio/{id}', [BookController::class, 'show'])->name('book.show')
 Route::get('contact_us', [BookController::class, 'contact_us'])->name('contattaci');
 
 
-route::post('contact_us', [BookController::class, 'contact_us_send'])->name('contattaci.send');
+Route::post('contact_us', [BookController::class, 'contact_us_send'])->name('contattaci.send');
 
 // inserimento libro
 Route::get('inserisci_libro', [BookController::class, 'create'])->name('book.create');

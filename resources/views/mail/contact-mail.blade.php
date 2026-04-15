@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Grazie per averci contattato {{{$user_contact}}}</h1>
+    <h1>Grazie per averci contattato {{ $user_contact }}</h1>
     <p>Abbiamo ricevuto il tuo messaggio e ti contatteremo al più presto.</p>
 </body>
 </html>

@@ -9,7 +9,7 @@ class Book extends Model
     protected $fillable = [
         'titolo',
         'autore',
-        'published_year',
+        'published_year'
         
     ];
 }

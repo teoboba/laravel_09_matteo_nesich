@@ -8,14 +8,17 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+          <a class="nav-link active px-3" aria-current="page" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('book.index') }}">Articoli</a>
+          <a class="nav-link px-3" href="{{ route('book.index') }}">Articoli</a>
         </li>
       </ul>
       <li class="nav-item">
-          <a class="nav-link" href="{{ route('contattaci') }}">contattaci</a>
+          <a class="nav-link px-3" href="{{ route('contattaci') }}">contattaci</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link px-3" href="{{ route('book.create') }}">inserisci libro</a>
         </li>
     </div>
   </div>
