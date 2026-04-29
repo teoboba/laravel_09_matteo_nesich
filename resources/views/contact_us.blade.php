@@ -5,6 +5,7 @@
 <div class="row h-100 justify-content-center align-items-center">
     <div class="col-md-6">
         <h2>Contattaci</h2>
+        
         <form action="{{ route('contattaci.send') }}" method="POST">
             @csrf
             <div class="mb-3">

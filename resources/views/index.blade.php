@@ -2,8 +2,10 @@
     <div class="container">
     <h1 class="my-4">I nostri Libri</h1>
     <div class="row">
+        
         @foreach ($books as $book)
-        <div class="card mb-4">
+        <div class="col-12 col-md-3 card mb-4 h-100 shadow">
+            <img src="{{Storage::url($book->img)}}" class="card-img-top" style="height: 300px" object-fit="cover" alt="Copertina di {{$book['titolo']}}">
             <div class="card-body">
                 <h3>{{$book['titolo']}}</h3>
                 <p>{{$book['autore']}}</p>

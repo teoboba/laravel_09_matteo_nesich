@@ -7,6 +7,7 @@ use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Mail\Mailables\Address;
 use App\Models\Book;
+use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
 {
@@ -51,11 +52,13 @@ public function create(){
 
 }
 
-public function store(Request $request){
+public function store(BookRequest $request){
+    
     $book = Book::create([
         'titolo' => $request->input('titolo'),
         'autore' => $request->input('autore'),
         'published_year' => $request->input('published_year'),
+        'img' => $request->file('img')->store('images', 'public'),
     ]);
         
 
