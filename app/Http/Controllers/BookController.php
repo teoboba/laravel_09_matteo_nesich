@@ -26,11 +26,11 @@ $books = Book::all();
 }
 
 public function show($id){
-    foreach($this->books as $book){
-        if($book['id'] == $id){
-            return view('show', ['book' => $book]);
-        }
+    $book = Book::find($id);
+    if($book){
+        return view('show', ['book' => $book]);
     }
+    return redirect(route('home'))->with('error', 'Libro non trovato');
 }
 
  public function contact_us () {
